@@ -8,5 +8,11 @@ pipeline {
                 bat 'dir'
             }
         }
+
+        stage('Check Python') {
+            steps {
+                bat 'python --version'
+            }
+        }
     }
 }
