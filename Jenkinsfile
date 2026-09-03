@@ -1,3 +1,4 @@
+// Jenkins security pipeline triggered by GitHub push
 pipeline {
     agent any
 
