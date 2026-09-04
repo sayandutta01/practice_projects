@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+secret-scan-report.json
+.jenkins-venv/
+.venv/
+venv/
+env/
