@@ -34,6 +34,11 @@ pipeline {
                 bat '.jenkins-venv\\Scripts\\python.exe -m bandit -r . -x .jenkins-venv,.venv,venv,env -f json -o bandit-report.json'
             }
         }
+                stage('Validate Bandit Report') {
+            steps {
+                bat '.jenkins-venv\\Scripts\\python.exe bandit_report_validator.py bandit-report.json'
+            }
+        }
     }
     
         post {
