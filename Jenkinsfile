@@ -23,5 +23,21 @@ pipeline {
                 bat '.jenkins-venv\\Scripts\\python.exe -m pip install bandit==1.9.4'
             }
         }
+        
+                stage('Secret Scan') {
+            steps {
+                bat '.jenkins-venv\\Scripts\\python.exe secret_scanner.py . --json-report secret-scan-report.json'
+            }
+        }
     }
+    
+        post {
+        always {
+            archiveArtifacts(
+                artifacts: 'secret-scan-report.json',
+                allowEmptyArchive: true
+            )
+        }
+    }
+
 }
