@@ -5,3 +5,4 @@ secret-scan-report.json
 .venv/
 venv/
 env/
+bandit-report.json

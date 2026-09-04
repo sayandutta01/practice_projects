@@ -29,15 +29,19 @@ pipeline {
                 bat '.jenkins-venv\\Scripts\\python.exe secret_scanner.py . --json-report secret-scan-report.json'
             }
         }
+                stage('Bandit Vulnerability Scan') {
+            steps {
+                bat '.jenkins-venv\\Scripts\\python.exe -m bandit -r . -x .jenkins-venv,.venv,venv,env -f json -o bandit-report.json'
+            }
+        }
     }
     
         post {
         always {
             archiveArtifacts(
-                artifacts: 'secret-scan-report.json',
+                artifacts: 'secret-scan-report.json, bandit-report.json',
                 allowEmptyArchive: true
             )
         }
     }
-
 }
