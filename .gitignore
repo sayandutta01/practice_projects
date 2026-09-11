@@ -4,5 +4,5 @@ secret-scan-report.json
 .jenkins-venv/
 .venv/
 venv/
-env/
+
 bandit-report.json
