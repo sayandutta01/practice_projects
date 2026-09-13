@@ -7,3 +7,6 @@ venv/
 .env
 bandit-report.json
 /env
+Jenkinsfile
+secret_scanner.py
+bandit_report_validator.py
