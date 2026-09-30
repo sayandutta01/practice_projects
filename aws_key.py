@@ -1,1 +1,0 @@
-aws_access_key_id = "AKIAFAKE000000000000"
