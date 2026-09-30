@@ -1,0 +1,4 @@
+database_url = (
+    "postgresql://demo_user:FakePassword123"
+    "@localhost:5432/demo_database"
+)
