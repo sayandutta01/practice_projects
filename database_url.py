@@ -1,1 +1,0 @@
-database_url = "postgresql://svc_app:V9r2K7m4Q8x1N6p3@192.0.2.10:5432/inventory"
