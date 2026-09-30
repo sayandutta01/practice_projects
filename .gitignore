@@ -4,10 +4,8 @@ secret-scan-report.json
 .jenkins-venv/
 .venv/
 venv/
-.env
 bandit-report.json
 /env
-.env
 Jenkinsfile
 secret_scanner.py
 bandit_report_validator.py
